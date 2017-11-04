@@ -1,0 +1,10 @@
+<h1>US Time Zone Display</h1>
+<button (click)="currentTime('PST')" [ngClass]="{on: lastTimeZoneSelected === 'PST'}">PST</button>
+<button (click)="currentTime('MST')" [ngClass]="{on: lastTimeZoneSelected === 'MST'}">MST</button>
+<button (click)="currentTime('CST')" [ngClass]="{on: lastTimeZoneSelected === 'CST'}">CST</button>
+<button (click)="currentTime('EST')" [ngClass]="{on: lastTimeZoneSelected === 'EST'}">EST</button>
+<button (click)="currentTime('NONE')" [ngClass]="{'hidden': ! on}">Click</button>
+<div class="time-container">
+{{ time | date:'medium' }}
+
+</div>
